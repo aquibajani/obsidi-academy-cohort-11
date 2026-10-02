@@ -5,11 +5,23 @@ public class Payment {
 	// Data / Properties
 	String accountHolderName;
 	float accountBalance;
+	static final float INTEREST_RATE = 0.5f;
+	static int count = 0;
 	
 	// Constructor
 	Payment(String accountHolderName, float accountBalance) {
 		this.accountHolderName = accountHolderName;
 		this.accountBalance = accountBalance;
+		count++;
+	}
+	
+	// Static Method
+	static void showInterest() {
+		System.out.println("The interest rate is : "+INTEREST_RATE);
+	}
+	
+	static void showCount() {
+		System.out.println("The count is : "+count);
 	}
 	
 	// Functionality / Behaviour

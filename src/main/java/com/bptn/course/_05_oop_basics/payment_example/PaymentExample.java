@@ -8,5 +8,8 @@ public class PaymentExample {
 		creditPayment.checkDetails();
 		
 		debitPayment.makePayment(50);
+		
+		Payment.showInterest();
+		Payment.showCount();
 	}
 }
