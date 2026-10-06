@@ -63,7 +63,7 @@ class PerishableProduct extends Product {
 	@Override
 	boolean checkQuantity(Product productName) {
 		// give an updated definition here
-		this.quantity = 100;
+//		this.quantity = 100;
 		super.checkQuantity(productName);
 		System.out.println("Overriden method called!");
 		return true;

@@ -5,11 +5,11 @@ public class Payment {
 	// Data / Properties
 	String accountHolderName;
 	float accountBalance;
-	static final float INTEREST_RATE = 0.5f;
+	public static final float INTEREST_RATE = 0.5f;
 	static int count = 0;
 	
 	// Constructor
-	Payment(String accountHolderName, float accountBalance) {
+	public Payment(String accountHolderName, float accountBalance) {
 		this.accountHolderName = accountHolderName;
 		this.accountBalance = accountBalance;
 		count++;
@@ -38,5 +38,12 @@ public class Payment {
 			return false;
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "Payment [accountHolderName=" + accountHolderName + ", accountBalance=" + accountBalance + "]";
+	}
+	
+	
 	
 }

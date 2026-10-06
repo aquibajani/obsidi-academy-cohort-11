@@ -11,5 +11,7 @@ public class PaymentExample {
 		
 		Payment.showInterest();
 		Payment.showCount();
+		
+		System.out.println(creditPayment);
 	}
 }
