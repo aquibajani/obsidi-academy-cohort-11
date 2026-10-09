@@ -30,5 +30,6 @@ public class HashSetManipulation {
 
 		// Use contains() method to check if the value "C" exists in the set
 		System.out.println(mySet.contains("A"));
+		
 	}
 }
