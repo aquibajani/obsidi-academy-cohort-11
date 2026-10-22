@@ -52,6 +52,27 @@ public class ProductDB {
 		    System.out.println("Exception:" + ex.getMessage());
 		  }
 		}
+	
+	public void getProductById(Connection conn, Integer product_id) {
+		  try {
+		      // This is a prepared statement. We'll go into more detail on these in the next lesson, so don't worry too much about exactly how it works right now. Just try to figure out how it's being used, and how the ? relates to what's going on:
+			  String sql = "SELECT * FROM dairy_products WHERE \"product_id\" = ?";
+			  PreparedStatement stmt = conn.prepareStatement(sql);
+		      // Note: we're using s so Java interprets our "" properly:
+		    
+		    stmt.setInt(1, product_id);  // 1 specifies the first parameter in the query
+		    ResultSet rs = stmt.executeQuery();
+		    while (rs.next()) {
+		      System.out.print("Product ID: " + rs.getInt("product_id"));
+		      System.out.print(", Product Name: " + rs.getString("product_name"));
+		      System.out.print(", Product Quantity: " + rs.getInt("product_quantity"));
+		      System.out.println(", Product Price: " + rs.getFloat("product_price"));
+		    }
+		    stmt.close();
+		  } catch (SQLException ex) {
+		    System.out.println("Exception:" + ex.getMessage());
+		  }
+		}
 
 	public boolean closeConnection(Connection conn) {
 		  boolean flag = true;

@@ -8,7 +8,8 @@ public class Main {
   public static void main(String[] args) {
 	  ProductDB jdbc = new ProductDB();
       Connection conn = jdbc.createConnection();
-      jdbc.getAllProducts(conn);
+//      jdbc.getAllProducts(conn);
+      jdbc.getProductById(conn, 3);
       jdbc.closeConnection(conn);
   }
 }
