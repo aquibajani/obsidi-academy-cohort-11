@@ -1,0 +1,21 @@
+/* CSS - Cascading Style Sheets */
+
+body {
+  background-color: rgba(255, 131, 23, 0.686);
+}
+
+header {
+  background-color: #ff2f40;
+}
+
+a {
+  background-color: royalblue;
+}
+
+body h1 {
+  color: #ff0000;
+}
+
+p {
+  color: royalblue;
+}
